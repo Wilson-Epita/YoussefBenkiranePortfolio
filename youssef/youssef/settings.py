@@ -26,7 +26,8 @@ SECRET_KEY = 'wwflpf-dyk04w1_g(^6*wihlw6#!5)m!$1chr6f(j9z@z_3n%l'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['15.237.146.171', 'portfolio.youssef-digital-nomad.com']
+ALLOWED_HOSTS = ['15.237.146.171', 'portfolio.youssef-digital-nomad.com',
+'127.0.0.1']
 
 
 # Application definition
