@@ -1,0 +1,20 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      python: 3.7
+    commands:
+      # Install dependencies needed for running tests
+      - pip install -r requirements.txt
+
+  pre_build:
+    commands:
+      # Discover and run unit tests. For more information, see <https://docs.djangoproject.com/en/2.0/topics/testing/overview/>
+      - echo 'test start'
+      - python manage.py collectstatic
+      - python manage.py test
+
+artifacts:
+  files:
+    - './**/*'
