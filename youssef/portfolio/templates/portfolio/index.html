@@ -47,6 +47,7 @@
  </div>
 </header>
 
+
 <!-- Container Picture -->
     <!-- Profile Picture -->
 <div class="container-fluid text-center">
@@ -54,6 +55,25 @@
         src={% static 'portfolio/images/profile.jpg'%}>
 </div>
 
+<!-- Portrait section -->
+<!-- Push down content on small screens -->
+<div class="container-fluid text-center">
+<div class="w3-hide-large"></div>
+
+<a href="#" class="w3-center"><h3>See all Photos</h3> </a>
+<!-- Photo grid -->
+<div class="w3-row">
+    <div class="w3-third">
+        <img src={%static 'portfolio/images/Ting.jpg'%} style="width:95%" onclick="onClick(this)" alt="A boy surrounded by beautiful nature">
+    </div>
+    <div class="w3-third">
+        <img src={%static 'portfolio/images/Marlon-Boddie.jpg'%} style="width:95%" onclick="onClick(this)" alt="A boy surrounded by beautiful nature">
+    </div>
+    <div class="w3-third">
+        <img src={%static 'portfolio/images/Jeremie.jpg'%} style="width:95%" onclick="onClick(this)" alt="A boy surrounded by beautiful nature">
+    </div>
+</div>
+</div>
 <!-- Presentation Container -->
 <div class="container-fluid bg-1 text-center text-size-1-25" id="presentation-section">
   <h3 class="margin">Who am I?</h3>
@@ -195,5 +215,18 @@ for (var j = 0; j < texts.length; j++) {
         delay: (el, i) => 35 * (i+1)
     });
 }
+</script>
+
+<!-- Images script  -->
+<script type="text/javascript">
+
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
 </script>
 </body>
