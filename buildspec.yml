@@ -15,6 +15,6 @@ phases:
       - python youssef/manage.py test
 
 artifacts:
+  base-directory: youssef
   files:
-    - 'youssef/**/*'
-    - .ebextensions/*
+    - './**/*'
