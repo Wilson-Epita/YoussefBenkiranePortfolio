@@ -1,0 +1,44 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI
+
+# Controls when the action will run. 
+on:
+  # Triggers the workflow on push or pull request events but only for the main branch
+  pull_request:
+    branches:
+      - main
+      - dev
+    types:
+      - opened
+      - reopened
+      - synchronize
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+ # This workflow contains a single job called "build"
+  test-suit:
+    name: Portfolio Testsuit
+    
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - name: Checkout codenase
+        uses: actions/checkout@v2
+        
+      - name: On demande pas
+        run: git fetch --no-tags --depth=1 origin ${{ github.base_ref }}
+    
+      - name: Setting up Python
+        uses: actions/setup-python@v1
+        with:
+          python-version: 3.6
+      
+      - name: Run Testsuit
+        run: python manage.py test 
+      
+      
+     
