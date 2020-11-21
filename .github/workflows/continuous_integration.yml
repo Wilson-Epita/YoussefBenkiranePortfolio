@@ -38,7 +38,7 @@ jobs:
           python-version: 3.6
       
       - name: Run Testsuit
-        run: python manage.py test 
+        run: python youssef/manage.py test 
       
       
      
