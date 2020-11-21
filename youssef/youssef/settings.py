@@ -26,6 +26,7 @@ SECRET_KEY = 'wwflpf-dyk04w1_g(^6*wihlw6#!5)m!$1chr6f(j9z@z_3n%l'
 DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1', '15.237.146.171',
+'dev.youssef-digital-nomad.com',
 'youssef-digital-nomad.com',
 'test-portfolio-env.eba-wb8sp26j.eu-west-3.elasticbeanstalk.com',
 'portfolio.youssef-digital-nomad.com']
