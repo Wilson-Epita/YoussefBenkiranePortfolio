@@ -1,4 +1,34 @@
 {%extends 'portfolio/base.html' %}
+{%load static %}
 
-{%block body%}
-{% endblock %}
+{%block title%} Youssef - Photography {%endblock%}
+
+{% block content %}
+<header class="w3-panel w3-center w3-opacity header-container">
+    <h1 class="">Youssef Digital Nomad</h1>
+  <h1 class="w3-xlarge ml3">Photography</h1>
+</header>
+
+  <!-- Photo Grid -->
+  <div class="w3-row" id="myGrid" style="margin-bottom:128px; padding-top:20px">
+    <div class="w3-third">
+        <img src={%static 'portfolio/images/Eleri.jpg'%} style="width:100%" alt="Portrait blue eyes">
+        <img src={%static 'portfolio/images/Ting.jpg'%} style="width:100%" alt="Portrait blue eyes">
+
+    </div>
+
+    <div class="w3-third">
+      <img src={%static 'portfolio/images/Ting.jpg'%} style="width:100%" alt="Portrait blue eyes">
+      <img src={%static 'portfolio/images/Jeremie.jpg'%} style="width:100%" alt="Portrait blue eyes">
+
+    </div>
+
+    <div class="w3-third">
+        <img src={%static 'portfolio/images/sunrise-lagos-bridge.jpg'%} style="width:100%" alt="Portrait blue eyes">
+        <img src={%static 'portfolio/images/Marlon-Boddie.jpg'%} style="width:100%" alt="Portrait blue eyes">
+
+    </div>
+  </div>
+
+
+{%endblock%}
