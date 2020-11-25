@@ -37,9 +37,11 @@ jobs:
         with:
           python-version: 3.6
           
-      - name: Install requirements
+
+      - name: Install Requirements
         run: pip install -r youssef/requirements.txt
-      
+              
+
       - name: Run Testsuit
         run: python youssef/manage.py test 
       
