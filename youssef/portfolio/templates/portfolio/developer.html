@@ -1,0 +1,54 @@
+{%extends 'portfolio/base.html' %}
+{%load static %}
+
+{%block title%}
+Youssef IT
+{%endblock%}
+
+{%block content %}
+<!-- Header block -->
+<header class="w3-panel w3-center w3-opacity header-container">
+    <h1 class="">Youssef Digital Nomad</h1>
+  <h1 class="w3-xlarge ml3">Software Engineer</h1>
+
+  <div class="w3-padding-32">
+     <div class="w3-bar w3-border">
+       <a href="{% url 'index' %}" class="w3-bar-item w3-button">Home</a>
+       <a href="{% url 'photo' %}" class="w3-bar-item w3-button">Photographer</a>
+     </div>
+   </div>
+
+</header>
+
+
+<!-- Formation Container -->
+<div class="container-fluid bg-2 text-center" id="formation-section">
+  <h3>Formation</h3><br>
+  <div class="row">
+    <div class="col-sm-4 padding-0">
+      <div class="school_description">
+          <h3>42 School Silicon Valley</h3>
+          <h4>United States</h1>
+          <p>July 2018 piscine</p>
+      </div>
+      <img src={%static 'portfolio/images/42school.jpg'%} class="img-responsive margin" style="width:100%" alt="School 42 picture">
+    </div>
+    <div class="col-sm-4 padding-0">
+        <div class="school_description">
+            <h3>EPITA</h3>
+            <h4>France</h4>
+            <p>School of engineer in computer intelligence</p>
+        </div>
+        <img src={%static 'portfolio/images/epita.jpg'%} class="img-responsive margin" style="width:100%" alt="EPITA picture">
+    </div>
+    <div class="col-sm-4 padding-0">
+        <div class="school_description">
+            <h3>Stellenboch University</h3>
+            <h4>South Africa</h4>
+            <p>Exchange semester</p>
+        </div>
+      <img src={%static 'portfolio/images/stellies.jpg'%} class="img-responsive margin" style="width:100%" alt="Stellenboch University picture">
+    </div>
+  </div>
+</div>
+{%endblock%}

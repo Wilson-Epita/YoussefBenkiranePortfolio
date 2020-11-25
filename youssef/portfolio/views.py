@@ -5,3 +5,6 @@ def index(request):
 
 def photo(request):
     return render(request,'portfolio/photo.html')
+
+def developer(request):
+    return render(request,'portfolio/developer.html')
